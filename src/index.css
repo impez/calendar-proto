@@ -1,13 +1,48 @@
+html,
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+
+.date-picker {
+  display: grid;
+  cursor: default;
+  gap: 0;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(auto-fill);
+  width: 0;
+}
+
+.date {
+  margin: 0 0.5em;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 100%;
+  transition: background-color 0.1s, color 0.15s;
+}
+
+.date:hover {
+  background-color: rgba(220, 226, 208, 0.349);
+}
+
+.date:active {
+  background-color: rgba(135, 188, 37, 0.062);
+  color: rgb(26, 26, 26);
+}
+
+.selected {
+  background-color: rgb(134, 188, 37);
+  color: white;
+}
+
+.selected:hover {
+  background-color: rgb(151, 207, 46);
 }
